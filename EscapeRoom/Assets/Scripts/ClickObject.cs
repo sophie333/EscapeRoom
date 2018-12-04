@@ -77,6 +77,13 @@ public class ClickObject : MonoBehaviour
         }
     }
 
+    public void Drop()
+    {
+        isCarrying = false;
+        carriedObject = null;
+        movableObj = null;
+    }
+
     private void ToggleLight()
     {
         if (pLight.intensity == 0.0f)
