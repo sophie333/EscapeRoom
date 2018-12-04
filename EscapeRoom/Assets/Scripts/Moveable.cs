@@ -1,16 +1,22 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Moveable : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    private bool pickedUp;
+
+    protected virtual void DoSomething()
+    {
+    }
+
+    public virtual bool PickedUp
+    {
+        get
+        {
+            return this.pickedUp;
+        }
+        set
+        {
+            this.pickedUp = value;
+        }
+    }
 }

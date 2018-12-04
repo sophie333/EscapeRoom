@@ -1,18 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ClickObject : MonoBehaviour
 {
-    [SerializeField]
-    private Light pLight;
+    [SerializeField] private Light pLight;
+    [SerializeField] private Light sLight;
 
     private bool isCarrying = false;
     private GameObject carriedObject;
+    private Moveable movableObj;
     private Transform m_transform;
 
-    public float distance;
-    public float smooth;
+    public float distanceCam = 0.75f;
+    public float distanceRay = 2.0f;
+    public float smooth = 7.0f;
 
     private void Start()
     {
@@ -26,7 +26,7 @@ public class ClickObject : MonoBehaviour
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            if (Physics.Raycast(ray, out hit, 2.0f))
+            if (Physics.Raycast(ray, out hit, distanceRay))
             {
                 if (hit.transform != null)
                 {
@@ -35,10 +35,9 @@ public class ClickObject : MonoBehaviour
                 }
             }
         }
-
         if (isCarrying)
         {
-            carriedObject.transform.position = Vector3.Lerp(carriedObject.transform.position, m_transform.position + m_transform.forward * distance, Time.deltaTime * smooth);
+            carriedObject.transform.position = Vector3.Lerp(carriedObject.transform.position, m_transform.position + m_transform.forward * distanceCam, Time.deltaTime * smooth);
             CheckDrop();
         }
 	}
@@ -55,6 +54,8 @@ public class ClickObject : MonoBehaviour
                 carriedObject = obj;
                 obj.GetComponent<Rigidbody>().isKinematic = true;
                 obj.transform.eulerAngles = new Vector3(0, 90, 0);
+                moveable.PickedUp = true;
+                movableObj = moveable;
             }
         }
 
@@ -71,6 +72,8 @@ public class ClickObject : MonoBehaviour
             isCarrying = false;
             carriedObject.GetComponent<Rigidbody>().isKinematic = false;
             carriedObject = null;
+            movableObj.PickedUp = false;
+            movableObj = null;
         }
     }
 
@@ -79,10 +82,12 @@ public class ClickObject : MonoBehaviour
         if (pLight.intensity == 0.0f)
         {
             pLight.intensity = 2.0f;
+            sLight.intensity = 2.0f;
         } 
         else
         {
             pLight.intensity = 0.0f;
+            sLight.intensity = 0.0f;
         }
     }
 }
