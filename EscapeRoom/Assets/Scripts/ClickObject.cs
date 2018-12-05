@@ -30,7 +30,6 @@ public class ClickObject : MonoBehaviour
             {
                 if (hit.transform != null)
                 {
-                    print(hit.transform.gameObject);
                     CheckInteraction(hit.transform.gameObject);
                 }
             }
@@ -38,6 +37,7 @@ public class ClickObject : MonoBehaviour
         if (isCarrying)
         {
             carriedObject.transform.position = Vector3.Lerp(carriedObject.transform.position, m_transform.position + m_transform.forward * distanceCam, Time.deltaTime * smooth);
+            carriedObject.transform.LookAt(m_transform);
             CheckDrop();
         }
 	}
@@ -53,7 +53,6 @@ public class ClickObject : MonoBehaviour
                 isCarrying = true;
                 carriedObject = obj;
                 obj.GetComponent<Rigidbody>().isKinematic = true;
-                obj.transform.eulerAngles = new Vector3(0, 90, 0);
                 moveable.PickedUp = true;
                 movableObj = moveable;
             }

@@ -23,6 +23,7 @@ public class GlobeBehavior : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.R))
             {
+                text.SetActive(false);
                 player.Drop();
                 element.GetComponent<Rigidbody>().isKinematic = true;
                 element.transform.position = Vector3.Lerp(element.transform.position, m_transform.position, 1.0f);
@@ -30,6 +31,7 @@ public class GlobeBehavior : MonoBehaviour
                 counter++;
                 if (counter == 4)
                 {
+                    Debug.Log(counter);
                     blankCode.SetActive(false);
                 }
             }
