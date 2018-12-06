@@ -1,0 +1,214 @@
+fileFormatVersion: 2
+guid: 27c47c75e5d5d8e4b98b8dae2aa8b8eb
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: 1_drawer
+    100002: 2_drawer
+    100004: back
+    100006: back_2
+    100008: back_3
+    100010: body
+    100012: bottom
+    100014: bottom_2
+    100016: bottom_3
+    100018: cabinet
+    100020: center
+    100022: CINEMA_4D_Editor
+    100024: cube
+    100026: cube_2
+    100028: front
+    100030: front_2
+    100032: left
+    100034: left_2
+    100036: left_3
+    100038: Light
+    100040: Light_1
+    100042: //RootNode
+    100044: Plane
+    100046: right
+    100048: right_2
+    100050: right_3
+    100052: top1
+    100054: top2
+    100056: Torus
+    100058: Torus_2
+    400000: 1_drawer
+    400002: 2_drawer
+    400004: back
+    400006: back_2
+    400008: back_3
+    400010: body
+    400012: bottom
+    400014: bottom_2
+    400016: bottom_3
+    400018: cabinet
+    400020: center
+    400022: CINEMA_4D_Editor
+    400024: cube
+    400026: cube_2
+    400028: front
+    400030: front_2
+    400032: left
+    400034: left_2
+    400036: left_3
+    400038: Light
+    400040: Light_1
+    400042: //RootNode
+    400044: Plane
+    400046: right
+    400048: right_2
+    400050: right_3
+    400052: top1
+    400054: top2
+    400056: Torus
+    400058: Torus_2
+    2000000: CINEMA_4D_Editor
+    2100000: No Name
+    2100002: Mat
+    2100004: Mat.1
+    2300000: back
+    2300002: back_2
+    2300004: back_3
+    2300006: bottom
+    2300008: bottom_2
+    2300010: bottom_3
+    2300012: center
+    2300014: cube
+    2300016: cube_2
+    2300018: left
+    2300020: left_2
+    2300022: left_3
+    2300024: Plane
+    2300026: right
+    2300028: right_2
+    2300030: right_3
+    2300032: top1
+    2300034: top2
+    2300036: Torus
+    2300038: Torus_2
+    3300000: back
+    3300002: back_2
+    3300004: back_3
+    3300006: bottom
+    3300008: bottom_2
+    3300010: bottom_3
+    3300012: center
+    3300014: cube
+    3300016: cube_2
+    3300018: left
+    3300020: left_2
+    3300022: left_3
+    3300024: Plane
+    3300026: right
+    3300028: right_2
+    3300030: right_3
+    3300032: top1
+    3300034: top2
+    3300036: Torus
+    3300038: Torus_2
+    4300000: Plane
+    4300002: back
+    4300004: cube
+    4300006: Torus
+    4300008: bottom
+    4300010: right
+    4300012: left
+    4300014: back_2
+    4300016: cube_2
+    4300018: Torus_2
+    4300020: bottom_2
+    4300022: right_2
+    4300024: left_2
+    4300026: right_3
+    4300028: left_3
+    4300030: center
+    4300032: top2
+    4300034: top1
+    4300036: bottom_3
+    4300038: back_3
+    7400000: CINEMA_4D_Main
+    9500000: //RootNode
+    10800000: Light
+    10800002: Light_1
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

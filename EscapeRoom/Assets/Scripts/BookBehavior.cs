@@ -28,9 +28,12 @@ public class BookBehavior : Moveable
         openedBook.SetActive(true);
     }
 
-    protected override void StopInteract()
+    public override void StopInteract()
     {
+        base.StopInteract();
         openedBook.SetActive(false);
         m_transform.GetChild(0).gameObject.SetActive(true);
     }
+
+
 }

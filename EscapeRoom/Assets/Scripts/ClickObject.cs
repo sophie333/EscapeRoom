@@ -68,6 +68,8 @@ public class ClickObject : MonoBehaviour
     {
         if(Input.GetMouseButton(1))
         {
+            movableObj.DropObject();
+            Debug.Log("was h s");
             isCarrying = false;
             carriedObject.GetComponent<Rigidbody>().isKinematic = false;
             carriedObject = null;

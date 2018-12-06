@@ -48,7 +48,7 @@ public class Moveable : MonoBehaviour {
                     StopInteract();
                 }
             }
-        }
+        }/*
         else
         {
             openText.gameObject.SetActive(false);
@@ -56,14 +56,24 @@ public class Moveable : MonoBehaviour {
             fpsController.distanceCam = 0.75f;
             opened = false;
             StopInteract();
-        }
+            Debug.Log("hibaseSTOPinteract");
+        }*/
     }
 
     protected virtual void Interact()
     {
     }
 
-    protected virtual void StopInteract()
+    public virtual void StopInteract()
     {
+    }
+
+    public void DropObject()
+    {
+        openText.gameObject.SetActive(false);
+        closeText.gameObject.SetActive(false);
+        fpsController.distanceCam = 0.75f;
+        opened = false;
+        StopInteract();
     }
 }
