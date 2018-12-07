@@ -10,14 +10,18 @@ public class BoxInteraction : MonoBehaviour
     [SerializeField] private GameObject codeText;
     [SerializeField] private GameObject heartKey;
     [SerializeField] private BookBehavior bookOnTop;
+    [SerializeField] private AudioSource buzzSound;
+    [SerializeField] private AudioSource unlockSound;
     [SerializeField] private string actualCode = "625";
     private KeyCode[] keycodeArray = { KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4, KeyCode.Alpha5, KeyCode.Alpha6, KeyCode.Alpha7, KeyCode.Alpha8, KeyCode.Alpha9 };
     private Transform m_transform;
     private Vector3 playerPos;
     private bool isInteracting;
     private bool solved;
+    private bool notPlayedYet = true;
     private string code = "";
     private int counter = 0;
+
 
     private void Start()
     {
@@ -37,6 +41,7 @@ public class BoxInteraction : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.R))
                 {
+                    stopInteractText.SetActive(true);
                     isInteracting = true;
                     interactText.SetActive(false);
                     player.GetComponent<FirstPersonController>().enabled = false;
@@ -48,7 +53,6 @@ public class BoxInteraction : MonoBehaviour
             else
             {
                 EnterCode();
-                stopInteractText.SetActive(true);
 
                 if (Input.GetKeyDown(KeyCode.F))
                 {
@@ -106,10 +110,16 @@ public class BoxInteraction : MonoBehaviour
         {
             if (code == actualCode)
             {
+                if(!unlockSound.isPlaying && notPlayedYet)
+                {
+                    unlockSound.Play();
+                    notPlayedYet = false;
+                }
                 solved = true;
             }
             else
             {
+                buzzSound.Play();
                 code = "";
                 codeText.GetComponent<TextMesh>().text = "___";
                 counter = 0;

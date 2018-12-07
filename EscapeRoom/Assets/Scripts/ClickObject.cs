@@ -4,6 +4,8 @@ public class ClickObject : MonoBehaviour
 {
     [SerializeField] private Light pLight;
     [SerializeField] private Light sLight;
+    [SerializeField] private AudioSource audio;
+    [SerializeField] private GameObject lightSwitch;
 
     public bool isCarrying = false;
     private GameObject carriedObject;
@@ -61,6 +63,7 @@ public class ClickObject : MonoBehaviour
         if (obj.name == "LightSwitch")
         {
             ToggleLight();
+            audio.Play();
         }
     }
 
@@ -90,11 +93,13 @@ public class ClickObject : MonoBehaviour
         {
             pLight.intensity = 2.0f;
             sLight.intensity = 2.0f;
+            lightSwitch.transform.eulerAngles = new Vector3(0, 0, 110);
         } 
         else
         {
             pLight.intensity = 0.0f;
             sLight.intensity = 0.0f;
+            lightSwitch.transform.eulerAngles = new Vector3(0, 0, 45);
         }
     }
 }

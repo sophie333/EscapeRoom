@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class GlobeBehavior : MonoBehaviour
 {
@@ -23,12 +24,13 @@ public class GlobeBehavior : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.R))
             {
+                element.audio.Play();
                 text.SetActive(false);
                 player.Drop();
                 element.GetComponent<Rigidbody>().isKinematic = true;
                 element.transform.position = Vector3.Lerp(element.transform.position, m_transform.position, 1.0f);
-                Destroy(element.gameObject);
                 counter++;
+                StartCoroutine(WaitAndReveal(5.0f, element));
                 if (counter == 4)
                 {
                     Debug.Log(counter);
@@ -36,6 +38,12 @@ public class GlobeBehavior : MonoBehaviour
                 }
             }
         }
+    }
+
+    IEnumerator WaitAndReveal(float waitTime, ElementBehavior element)
+    {
+        yield return new WaitForSeconds(waitTime);
+        Destroy(element.gameObject);
     }
 
     private void OnTriggerExit(Collider other)
