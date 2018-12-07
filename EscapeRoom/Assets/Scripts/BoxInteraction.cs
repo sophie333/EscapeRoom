@@ -70,7 +70,8 @@ public class BoxInteraction : MonoBehaviour
     {
         yield return new WaitForSeconds(waitTime);
         heartKey.GetComponent<Rigidbody>().isKinematic = false;
-        Debug.Log("no more kinematic");
+        Debug.Log("hi");
+        //heartKey.transform.parent = null;
     }
 
     private void OnTriggerExit(Collider other)
@@ -102,7 +103,6 @@ public class BoxInteraction : MonoBehaviour
         {
             if (code == actualCode)
             {
-                Debug.Log("hurrary");
                 solved = true;
             }
             else
