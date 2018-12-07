@@ -5,7 +5,7 @@ public class ClickObject : MonoBehaviour
     [SerializeField] private Light pLight;
     [SerializeField] private Light sLight;
 
-    private bool isCarrying = false;
+    public bool isCarrying = false;
     private GameObject carriedObject;
     private Moveable movableObj;
     private Transform m_transform;

@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 
 public class BookBehavior : Moveable
-{    
+{
+    [SerializeField] private ClickObject player;
     [SerializeField] private GameObject openedBook;
     [SerializeField] private Material page1;
     [SerializeField] private Material page2;
@@ -17,6 +18,7 @@ public class BookBehavior : Moveable
     {
         //transform opened to closed book
         openedBook.transform.position = m_transform.position;
+        openedBook.transform.LookAt(player.transform);
         //parent openedbook
         openedBook.transform.parent = m_transform;
         //set textures
@@ -34,6 +36,4 @@ public class BookBehavior : Moveable
         openedBook.SetActive(false);
         m_transform.GetChild(0).gameObject.SetActive(true);
     }
-
-
 }

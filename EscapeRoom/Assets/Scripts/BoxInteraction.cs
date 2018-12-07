@@ -8,6 +8,7 @@ public class BoxInteraction : MonoBehaviour
     [SerializeField] private GameObject interactText;
     [SerializeField] private GameObject codeText;
     [SerializeField] private GameObject heartKey;
+    [SerializeField] private BookBehavior bookOnTop;
     [SerializeField] private string actualCode = "625";
     private KeyCode[] keycodeArray = { KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4, KeyCode.Alpha5, KeyCode.Alpha6, KeyCode.Alpha7, KeyCode.Alpha8, KeyCode.Alpha9 };
     private Transform m_transform;
@@ -28,7 +29,7 @@ public class BoxInteraction : MonoBehaviour
 
         if (player)
         {
-            if (!isInteracting && !solved)
+            if (!isInteracting && !solved && bookOnTop.removed)
             {
                 interactText.SetActive(true);
                 playerPos = player.transform.position;
@@ -70,8 +71,6 @@ public class BoxInteraction : MonoBehaviour
     {
         yield return new WaitForSeconds(waitTime);
         heartKey.GetComponent<Rigidbody>().isKinematic = false;
-        Debug.Log("hi");
-        //heartKey.transform.parent = null;
     }
 
     private void OnTriggerExit(Collider other)

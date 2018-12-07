@@ -8,6 +8,7 @@ public class Moveable : MonoBehaviour {
     [SerializeField] private Text closeText;
     private bool pickedUp;
     private bool opened;
+    public bool removed;
 
     public virtual bool PickedUp
     {
@@ -25,6 +26,7 @@ public class Moveable : MonoBehaviour {
     {
         if (pickedUp)
         {
+            removed = true;
             if (!opened)
             {
                 openText.gameObject.SetActive(true);
