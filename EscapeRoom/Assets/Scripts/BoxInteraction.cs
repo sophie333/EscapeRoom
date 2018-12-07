@@ -6,6 +6,7 @@ public class BoxInteraction : MonoBehaviour
 {
     [SerializeField] private Animator anim;
     [SerializeField] private GameObject interactText;
+    [SerializeField] private GameObject stopInteractText;
     [SerializeField] private GameObject codeText;
     [SerializeField] private GameObject heartKey;
     [SerializeField] private BookBehavior bookOnTop;
@@ -47,9 +48,12 @@ public class BoxInteraction : MonoBehaviour
             else
             {
                 EnterCode();
+                stopInteractText.SetActive(true);
+
                 if (Input.GetKeyDown(KeyCode.F))
                 {
-                    isInteracting = false;                    
+                    isInteracting = false;
+                    stopInteractText.SetActive(false);
                     player.transform.position = new Vector3(1.35f, 1.02f, -1.8f); //playerPos;
                     player.transform.eulerAngles = new Vector3(0, 0, 0);
                     player.GetComponent<FirstPersonController>().enabled = true;
