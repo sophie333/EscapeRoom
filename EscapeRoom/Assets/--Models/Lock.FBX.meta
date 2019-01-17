@@ -1,0 +1,203 @@
+fileFormatVersion: 2
+guid: 251d2b2c82380ca4b83bca6be87a77d3
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Chain
+    100004: Chain002
+    100006: Chain003
+    100008: Chain004
+    100010: Chain005
+    100012: Chain006
+    100014: Chain007
+    100016: Chain008
+    100018: Chain009
+    100020: Chain010
+    100022: Chain011
+    100024: Chain012
+    100026: Chain014
+    100028: Chain015
+    100030: Chain016
+    100032: Chain017
+    100034: Chain018
+    100036: Chain019
+    100038: Chain020
+    100040: Chain021
+    100042: Chain022
+    100044: Plane004
+    400000: //RootNode
+    400002: Chain
+    400004: Chain002
+    400006: Chain003
+    400008: Chain004
+    400010: Chain005
+    400012: Chain006
+    400014: Chain007
+    400016: Chain008
+    400018: Chain009
+    400020: Chain010
+    400022: Chain011
+    400024: Chain012
+    400026: Chain014
+    400028: Chain015
+    400030: Chain016
+    400032: Chain017
+    400034: Chain018
+    400036: Chain019
+    400038: Chain020
+    400040: Chain021
+    400042: Chain022
+    400044: Plane004
+    2100000: 'Material #26'
+    2100002: No Name
+    2300000: //RootNode
+    2300002: Chain
+    2300004: Chain002
+    2300006: Chain003
+    2300008: Chain004
+    2300010: Chain005
+    2300012: Chain006
+    2300014: Chain007
+    2300016: Chain008
+    2300018: Chain009
+    2300020: Chain010
+    2300022: Chain011
+    2300024: Chain012
+    2300026: Chain014
+    2300028: Chain015
+    2300030: Chain016
+    2300032: Chain017
+    2300034: Chain018
+    2300036: Chain019
+    2300038: Chain020
+    2300040: Chain021
+    2300042: Chain022
+    2300044: Plane004
+    3300000: //RootNode
+    3300002: Chain
+    3300004: Chain002
+    3300006: Chain003
+    3300008: Chain004
+    3300010: Chain005
+    3300012: Chain006
+    3300014: Chain007
+    3300016: Chain008
+    3300018: Chain009
+    3300020: Chain010
+    3300022: Chain011
+    3300024: Chain012
+    3300026: Chain014
+    3300028: Chain015
+    3300030: Chain016
+    3300032: Chain017
+    3300034: Chain018
+    3300036: Chain019
+    3300038: Chain020
+    3300040: Chain021
+    3300042: Chain022
+    3300044: Plane004
+    4300000: Lock
+    4300002: Plane004
+    4300004: Chain002
+    4300006: Chain003
+    4300008: Chain004
+    4300010: Chain005
+    4300012: Chain006
+    4300014: Chain007
+    4300016: Chain008
+    4300018: Chain009
+    4300020: Chain010
+    4300022: Chain011
+    4300024: Chain012
+    4300026: Chain014
+    4300028: Chain015
+    4300030: Chain016
+    4300032: Chain017
+    4300034: Chain018
+    4300036: Chain019
+    4300038: Chain020
+    4300040: Chain021
+    4300042: Chain022
+    4300044: Chain
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
