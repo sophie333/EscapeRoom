@@ -33,6 +33,7 @@ ModelImporter:
     100054: Bookshelf028
     100056: Bookshelf029
     100058: Bookshelf030
+    100060: Bookshelf001
     400000: //RootNode
     400002: Bookshelf002
     400004: Bookshelf003
@@ -63,6 +64,7 @@ ModelImporter:
     400054: Bookshelf028
     400056: Bookshelf029
     400058: Bookshelf030
+    400060: Bookshelf001
     2100000: 'Material #26'
     2300000: //RootNode
     2300002: Bookshelf002
@@ -94,6 +96,7 @@ ModelImporter:
     2300054: Bookshelf028
     2300056: Bookshelf029
     2300058: Bookshelf030
+    2300060: Bookshelf001
     3300000: //RootNode
     3300002: Bookshelf002
     3300004: Bookshelf003
@@ -124,6 +127,7 @@ ModelImporter:
     3300054: Bookshelf028
     3300056: Bookshelf029
     3300058: Bookshelf030
+    3300060: Bookshelf001
     4300000: Bookshelf
     4300002: Bookshelf002
     4300004: Bookshelf003
@@ -154,6 +158,7 @@ ModelImporter:
     4300054: Bookshelf028
     4300056: Bookshelf029
     4300058: Bookshelf030
+    4300060: Bookshelf001
   externalObjects: {}
   materials:
     importMaterials: 1
