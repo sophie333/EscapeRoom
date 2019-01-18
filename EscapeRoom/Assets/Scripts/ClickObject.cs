@@ -82,6 +82,7 @@ public class ClickObject : MonoBehaviour
 
     public void Drop()
     {
+        movableObj.PickedUp = false;
         isCarrying = false;
         carriedObject = null;
         movableObj = null;
@@ -91,8 +92,8 @@ public class ClickObject : MonoBehaviour
     {
         if (pLight.intensity == 0.0f)
         {
-            pLight.intensity = 2.0f;
-            sLight.intensity = 2.0f;
+            pLight.intensity = 5.0f;
+            sLight.intensity = 5.0f;
             lightSwitch.transform.eulerAngles = new Vector3(0, 0, 110);
         } 
         else

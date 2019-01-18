@@ -45,7 +45,8 @@ public class BoxInteraction : MonoBehaviour
                     isInteracting = true;
                     interactText.SetActive(false);
                     player.GetComponent<FirstPersonController>().enabled = false;
-                    player.transform.position = new Vector3(0.08f, 0.537f, -1.76f);
+                    //player.transform.position = new Vector3(0.08f, 0.537f, -1.76f);
+                    player.transform.position = new Vector3(0.36f, 1.07f, -1.73f);
                     player.transform.rotation = Quaternion.Euler(0, 0, 0);
                     player.transform.GetChild(0).gameObject.transform.rotation = Quaternion.Euler(90, -90, 0);
                 }
@@ -67,7 +68,7 @@ public class BoxInteraction : MonoBehaviour
                     }
                     else
                     {
-                        anim.Play("OpenDrawer");
+                        anim.Play("DrawerAnim");
                         StartCoroutine(WaitAndReveal(1.0f));
                     }
                 }

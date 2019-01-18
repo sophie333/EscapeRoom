@@ -1,13 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class GlobeBehavior : MonoBehaviour
 {
     [SerializeField] private ClickObject player;
     [SerializeField] private GameObject text;
-    [SerializeField] private GameObject blankCode;
+    [SerializeField] private GameObject display;
+    [SerializeField] private Material code;
     private Transform m_transform;
     private int counter = 0;
+    [SerializeField] private Text openText;
+    [SerializeField] private Text closeText;
 
     private void Start()
     {
@@ -18,13 +22,14 @@ public class GlobeBehavior : MonoBehaviour
     {
         ElementBehavior element = other.GetComponent<ElementBehavior>();
 
-        if (element)
+        if (element && !element.GetUsed())
         {
             text.SetActive(true);
 
             if (Input.GetKeyDown(KeyCode.R))
             {
                 element.audio.Play();
+                element.SetUsed(true);
                 text.SetActive(false);
                 player.Drop();
                 element.GetComponent<Rigidbody>().isKinematic = true;
@@ -34,8 +39,10 @@ public class GlobeBehavior : MonoBehaviour
                 if (counter == 4)
                 {
                     Debug.Log(counter);
-                    blankCode.SetActive(false);
+                    display.GetComponent<Renderer>().material = code;
                 }
+                openText.gameObject.SetActive(false);
+                closeText.gameObject.SetActive(false);
             }
         }
     }

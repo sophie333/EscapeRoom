@@ -5,7 +5,6 @@ public class BookBehavior : Moveable
     [SerializeField] private ClickObject player;
     [SerializeField] private GameObject openedBook;
     [SerializeField] private Material page1;
-    [SerializeField] private Material page2;
 
     private Transform m_transform;
 
@@ -22,8 +21,7 @@ public class BookBehavior : Moveable
         //parent openedbook
         openedBook.transform.parent = m_transform;
         //set textures
-        openedBook.transform.GetChild(0).GetComponent<Renderer>().material = page1;
-        openedBook.transform.GetChild(1).GetComponent<Renderer>().material = page2;
+        openedBook.transform.GetComponent<Renderer>().material = page1;
         //make current book invisible
         m_transform.GetChild(0).gameObject.SetActive(false);
         //make opened book visible

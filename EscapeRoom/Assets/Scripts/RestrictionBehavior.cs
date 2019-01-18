@@ -28,12 +28,13 @@ public class RestrictionBehavior : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.R))
                 {
                     text.SetActive(false);
-                    anim1.Play("OpenDoor1");
-                    anim2.Play("OpenDoor2");
+                    anim1.Play("Gate1Anim");
+                    anim2.Play("Gate2Anim");
                     lock1.GetComponent<Rigidbody>().isKinematic = false;
                     player.Drop();
                     Destroy(other.gameObject);
                     unlocked = true;
+                    this.gameObject.SetActive(false);
                 }
             }
         }
